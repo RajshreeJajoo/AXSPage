@@ -7,6 +7,7 @@ import image8 from '../assests/image8.jpeg'
 import image9 from '../assests/image9.jpeg'
 import image10 from '../assests/image10.jpeg'
 import logo from '../assests/TopRevealedTen.jpeg'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Season1=()=>{
 
@@ -37,7 +38,12 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
     return(
 <View>
         <TouchableOpacity onPress={showMore}>
-       <Text style={{margin:'3%',fontWeight:'600'}}>See More</Text>
+          <View style={{flexDirection:'row'}}>
+          <Text style={{margin:'3%',fontWeight:'600'}}>See More</Text>
+          <Icon name='expand' size={20} style={{marginTop:'2.5%',marginLeft:'70%'}}/>
+
+          </View>
+
       </TouchableOpacity>
       <Divider/>
 

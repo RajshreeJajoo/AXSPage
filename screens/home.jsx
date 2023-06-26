@@ -8,7 +8,7 @@ import logo from '../assests/TopRevealedTen.jpeg'
 import { Divider } from "@react-native-material/core";
 import Season1 from '../../AxsTvPage/screens/season1';
 import MoreEpisodeSeries from '../../AxsTvPage/screens/moreEpisodeSeries';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Home =()=>{
     return(
@@ -29,8 +29,12 @@ const Home =()=>{
     </ImageBackground>
 
     <Text style={{margin:'2%'}}>2018 | English</Text>
+<View style={{flexDirection:'row'}}>
+<Text style={{marginLeft:'2%',fontWeight:'600'}}>The Top ten Revealed puts the spoitlight</Text>
+<Icon name='share' size={20} style={{marginTop:'0%',marginLeft:'15%'}} onPress={()=>alert("Share This")}/>
+<Icon name='watch' size={20} style={{marginTop:'0%',marginLeft:'5%'}} onPress={()=>alert("WatchNow")}/>
 
-    <Text style={{marginLeft:'2%',fontWeight:'600'}}>The Top ten Revealed puts the spoitlight</Text>
+</View>
     <Text style={{margin:'2%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat praesentium provident quibusdamo dolore</Text>
 
      {/* <Accordion>
