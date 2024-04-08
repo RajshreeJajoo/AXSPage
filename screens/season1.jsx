@@ -39,8 +39,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
 <View>
         <TouchableOpacity onPress={showMore}>
           <View style={{flexDirection:'row'}}>
-          <Text style={{margin:'3%',fontWeight:'600'}}>See More</Text>
-          <Icon name='expand' size={20} style={{marginTop:'2.5%',marginLeft:'70%'}}/>
+          <Text style={{margin:'3%',fontWeight:'600',color:'black'}}>See More</Text>
+          <Icon name='expand' color='black' size={20} style={{marginTop:'2.5%',marginLeft:'70%'}}/>
 
           </View>
 
@@ -65,9 +65,9 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
     <View style={{flexDirection:'row'}}>
     <Image source={logo} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 24 </Text>
-    <Text>2018 | 02:03:35</Text>
-    <Text style={{marginRight:'2%',width:'40%',marginTop:'2%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat praesentium 
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 24 </Text>
+    <Text style={{color:'black'}}>2018 | 02:03:35</Text>
+    <Text style={{marginRight:'2%',width:'40%',marginTop:'2%',color:'black'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat praesentium 
     </Text>
   </View>
     </View>
@@ -77,8 +77,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
   <View style={{flexDirection:'row'}}>
     <Image source={image6} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 25</Text>
-    <Text>2018 | 01:03:00</Text>
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 25</Text>
+    <Text style={{color:'black'}}>2018 | 01:03:00</Text>
         </View>
     </View>
 
@@ -87,8 +87,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
    <View style={{flexDirection:'row'}}>
     <Image source={image7} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 26</Text>
-    <Text>2018 | 02:00:35</Text>
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 26</Text>
+    <Text style={{color:'black'}}>2018 | 02:00:35</Text>
         </View>
     </View>
     
@@ -101,8 +101,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
     <View style={{flexDirection:'row'}}>
     <Image source={image8} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 290 </Text>
-    <Text>2020 | 01:00:40</Text>
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 290 </Text>
+    <Text style={{color:'black'}}>2020 | 01:00:40</Text>
   </View>
     </View>
 
@@ -112,8 +112,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
     <View style={{flexDirection:'row'}}>
     <Image source={image9} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 291 </Text>
-    <Text>2020 | 03:12:00</Text>
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 291 </Text>
+    <Text style={{color:'black'}}>2020 | 03:12:00</Text>
    
   </View>
     </View>
@@ -124,8 +124,8 @@ const[showEpsiodeSeason2,setShowEpsiodeSeason2] = useState(false)
     <View style={{flexDirection:'row'}}>
     <Image source={image10} style={styles.imageDesgin}/>
     <View style={{flexDirection:'column',marginTop:'4%'}}>
-    <Text style={{fontWeight:'500'}}>The Top Ten Episode 292 </Text>
-    <Text>2020 | 01:40:35</Text>
+    <Text style={{fontWeight:'500',color:'black'}}>The Top Ten Episode 292 </Text>
+    <Text style={{color:'black'}}>2020 | 01:40:35</Text>
  
   </View>
     </View>
@@ -142,8 +142,8 @@ export default Season1
 
 const styles = StyleSheet.create({
     imageDesgin:{
-        width:'40%',
-        margin:'2%'
+        width:'50%',
+        margin:'1%'
     },
     buttonDesgin:{
         margin:'2%',

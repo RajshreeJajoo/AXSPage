@@ -1,4 +1,4 @@
-import { StyleSheet, Text,TouchableOpacity,Button, View ,Image, BackHandler, ImageBackground,ScrollView} from 'react-native';
+import { StyleSheet, Text,TouchableOpacity,Share, View ,Image, ImageBackground,ScrollView, Linking} from 'react-native';
 import React ,{useState} from 'react';
 import logo from '../assests/TopRevealedTen.jpeg'
 // import Accordion from '@mui/material/Accordion';
@@ -8,34 +8,50 @@ import logo from '../assests/TopRevealedTen.jpeg'
 import { Divider } from "@react-native-material/core";
 import Season1 from '../../AxsTvPage/screens/season1';
 import MoreEpisodeSeries from '../../AxsTvPage/screens/moreEpisodeSeries';
-import Icon from 'react-native-vector-icons/MaterialIcons';
-
+import Icon from 'react-native-vector-icons/Feather';
 const Home =()=>{
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          'share link with your family and friends',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      Alert.alert(error.message);
+    }
+  };
     return(
  <ScrollView>
     <View style={{height:'auto'}}>
-    <ImageBackground source={logo} style={{width:'100%'}}>
+    <TouchableOpacity  
+     onPress={()=>Linking.openURL('https://youtu.be/6HL1oKE6aZc?si=6xVTT1QRhVhjYPez')}>
+    <ImageBackground source={logo} style={{width:'100%',margin:'1%',padding:'1%'}}>
 
-    <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:'48%',margin:'1.2%'}}>
-     <TouchableOpacity  style={[styles.imageButton,{width:'22%'}]} 
-     onPress={()=>alert('Watch Now')}>
-       <Text style={{color:'white'}}>Watch Now</Text>
-      </TouchableOpacity>
-      <TouchableOpacity  style={[styles.imageButton,{width:'40%'}]} 
-      onPress={()=>alert('Add To My Watch List')}>
-       <Text style={{color:'white'}}>Add To My Watch List</Text>
-      </TouchableOpacity>
+    <View style={{alignItems:'center',marginTop:'40%',margin:'1.2%'}}>
+       <Icon name='play-circle' color='white' size={40} style={{marginBottom:'20%'}} onPress={()=>Linking.openURL('https://youtu.be/6HL1oKE6aZc?si=6xVTT1QRhVhjYPez')}/>      
      </View>
     </ImageBackground>
+    </TouchableOpacity>
 
-    <Text style={{margin:'2%'}}>2018 | English</Text>
+
+    <Text style={{margin:'2%',color:'black'}}>2018 | English</Text>
 <View style={{flexDirection:'row'}}>
-<Text style={{marginLeft:'2%',fontWeight:'600'}}>The Top ten Revealed puts the spoitlight</Text>
-<Icon name='share' size={20} style={{marginTop:'0%',marginLeft:'15%'}} onPress={()=>alert("Share This")}/>
-<Icon name='watch' size={20} style={{marginTop:'0%',marginLeft:'5%'}} onPress={()=>alert("WatchNow")}/>
+<Text style={{marginLeft:'2%',fontWeight:'600',color:'black'}}>The Top ten Revealed puts the spoitlight</Text>
+<Icon name='share' size={20}  color='black' style={{marginTop:'0%',marginLeft:'15%'}} onPress={onShare}/>
+<Icon name='watch' size={20} color='black' style={{marginTop:'0%',marginLeft:'5%'}} onPress={()=>alert("Add To My Watch List")}/>
 
 </View>
-    <Text style={{margin:'2%'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat praesentium provident quibusdamo dolore</Text>
+    <Text style={{margin:'2%',color:'black'}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat praesentium provident quibusdamo dolore</Text>
 
      {/* <Accordion>
         <AccordionSummary>
@@ -73,8 +89,9 @@ export default Home
 
 const styles= StyleSheet.create({
     imageButton:{
-        backgroundColor:'#007FFF',
-        marginBottom:'2%',
+        // backgroundColor:'#007FFF',
+        // marginBottom:'2%',
+        borderRadius:20,
         alignItems:'center'
     }
 })
